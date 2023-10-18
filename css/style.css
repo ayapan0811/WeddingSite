@@ -1,0 +1,523 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+:root{
+  --maincolor : #F55171;
+  --footerbg : #2b2b2b;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+/*===============================
+mobile version
+==================================*/
+@media (min-width: 200px){
+
+  header > section,
+  main,
+  main > section,
+  main > section > article,
+  main > section > section,
+  figure,
+  figcaption,
+  form,
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  header h1{
+    text-align: center;
+  }
+  hr{
+    display: none;
+  }
+  nav{
+    min-height: 5vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+  }
+  nav > aside{
+    display: flex;
+    color: var(--maincolor);
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+         padding-left: 5%;
+
+  }
+  nav > ul{
+    display: none;
+
+  }
+  details{
+    padding-left: 5%;
+    position: absolute;
+    width: 90%;
+    text-align: right;
+  }
+  details > ul{
+    width: 90%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  details li{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--maincolor);
+  }
+  details a{
+    padding: 5%;
+    width: 100%;
+    text-decoration: none;
+    color: var(--footerbg);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  summary{
+    color: var(--maincolor);
+  }
+  main > section{
+    row-gap: 4vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  main > section > article,
+  footer,
+  figure,
+  figcaption,
+  .about aside{
+    align-items: center;
+    text-align: center;
+  }
+  main{
+    padding-bottom: 10vh;
+  }
+  /*============================
+  header
+  ==============================*/
+  header{
+    background-image: url(/img/wedding-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 60vh;
+    border-bottom-left-radius:15vh ;
+    border-bottom-right-radius: 15vh;
+  }
+  header > section{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 81, 113, .650);
+    border-bottom-left-radius:15vh ;
+    border-bottom-right-radius: 15vh;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+  }
+  header h1{
+    text-align: center;
+  }
+
+
+  /*============================
+  about
+  ==============================*/
+
+  .about figure{
+    border: 5px solid var(--maincolor);
+    border-radius: 50%;
+    width: 30vh;
+    height: 30vh;
+  }
+  .about img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .about > section{
+    align-items: center;
+    row-gap: 4vh;
+  }
+  .about > section > article{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+  }
+  .about aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    line-height: 1.5;
+    width: 90%;
+  }
+  .about p{
+    font-size: 16px;
+  }
+  .about a{
+    background-color: var(--footerbg);
+    color: white;
+  }
+
+
+  /*============================
+  service
+  ==============================*/
+  .service{
+    background-color: var(--maincolor);
+  }
+  .service img{
+    padding: 1%;
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+    outline: 10px solid whitesmoke;
+  }
+  .service > section > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+  }
+  figure, figcaption{
+    /*align-items: center;
+    text-align: center;*/
+    row-gap: 2vh;
+    color: whitesmoke;
+  }
+  .service P{
+    line-height: 1.5;
+    width: 90%;
+    font-size: 16px;
+  }
+  .service h3{
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  header > section > a,
+  .about a,
+  .service a{
+    border: 3px solid whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    width: 30%;
+    background-color: whitesmoke;
+    color: var(--footerbg);
+    font-weight: 600;
+    padding: 2vh;
+  }
+  header > section > a{
+    color: var(--maincolor);
+  }
+  .service > section{
+    align-items: center;
+    row-gap: 5vh;
+  }
+  .service > article{
+    row-gap: 3vh;
+    color: whitesmoke;
+  }
+  .service h2{
+    border-bottom: 0.5px solid whitesmoke;
+    padding-bottom: 3vh;
+  }
+
+
+  /*============================
+  contact
+  ==============================*/
+  .about > article,
+  .contact > article{
+    row-gap: 1vh;
+    /*
+    align-items: center;
+    text-align: center;*/
+  }
+  .contact hr{
+    display: none;
+    /*border-width: 0.5px;
+    border-color: var(--maincolor);
+    width: 50%;*/
+  }
+  .about > article h2,
+  .contact > article h2{
+    border-bottom: 0.5px solid var(--maincolor);
+    padding-bottom: 1vh;
+    width: 60%;
+  }
+  .contact > section{
+    align-items: center;
+
+  }
+  .contact form{
+    /*display: flex;
+    flex-direction: column;*/
+    row-gap: 3vh;
+    width: 90%;
+    align-items: center;
+  }
+  .contact input{
+    width: 90%;
+    padding: 2vh;
+    border: 3px solid var(--footerbg);
+  }
+  .contact [type="submit"]{
+    width: 50%;
+    background-color: var(--footerbg);
+    border: 3px solid var(--footerbg);
+    color: whitesmoke;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+  /*===========================
+  footer
+  =============================*/
+
+  footer{
+    /*align-items: center;
+    text-align: center;*/
+    padding: 1%;
+    background-color: #2b2b2b;
+    row-gap: 2vh;
+    padding-top: 5vh;
+
+  }
+  footer > h2,
+  footer > p{
+    color: whitesmoke;
+  }
+  footer > h2{
+    font-size: 36px;
+  }
+  footer > h3{
+    font-size: 40px;
+    color: var(--maincolor);
+  }
+  footer > p{
+    padding-top: 3vh;
+    width: 90%;
+    border-top: 1px solid whitesmoke;
+  }
+
+}
+
+
+/*===============================
+tablet version
+==================================*/
+
+
+@media(min-width:600px){
+/*========
+header
+==========*/
+header {
+  height: 45vh;
+}
+header h1{
+  font-size: 50px;
+  width: 70%;
+}
+header > section > a{
+  width:20% ;
+  padding: 1%;
+  transition: .6s;
+
+}
+header > section > a:hover{
+  background-color: transparent;
+  color: white;
+}
+nav{
+  min-height: 7vh;
+}
+nav > aside{
+  font-size: 28px;
+}
+details{
+  display: none;
+}
+nav > ul{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav a{
+  text-decoration: none;
+  color: var(--footerbg);
+  font-weight: 600;
+  transition: .6s;
+}
+nav a:hover{
+  color: var(--maincolor);
+}
+
+/*===========
+about
+=============*/
+.about a{
+  width: 25%;
+  padding: 1vh;
+  border: 3px solid var(--footerbg);
+  transition: .6s;
+}
+.about a:hover{
+  background-color: transparent;
+  color:var(--footerbg);
+}
+.about > article > h2{
+  font-size: 38px;
+  width: 35%;
+}
+.about > section > article{
+  flex-direction: row;
+  -moz-column-gap: 5vh;
+       column-gap: 5vh;
+}
+.about figure{
+  border-width: 10px;
+  width: 20vh;
+  height: 20vh;
+}
+/*============
+service
+===============*/
+.service > section > article{
+  flex-direction: row;
+}
+.service img{
+  width: 10vh;
+  height: 10vh;
+  outline: 3px solid white;
+}
+.service > article > h2{
+  font-size: 38px;
+  padding-bottom: 1%;
+}
+.service a{
+  padding: 1vh;
+  width: 20%;
+  transform-origin: .6s;
+}
+.service a:hover{
+  background-color: transparent;
+  color: white;
+}
+.service h3{
+  font-size: 20px;
+}
+
+/*=========
+contact
+==========*/
+  form{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+  }
+  .contact > article > h2{
+    width: 40%;
+    font-size: 38px;
+  }
+
+  .contact input{
+    width: 35%;
+    padding: 2%;
+  }
+  .contact [type="submit"]{
+    width: 25%;
+    transition: .6s;
+  }
+  .contact [type="submit"]:hover{
+    background-color: transparent;
+    color: var(--footerbg);
+    cursor: pointer;
+  }
+
+
+/*===============================
+footer
+==================================*/
+  footer > h3{
+    font-size: 48px;
+  }
+  footer > h2{
+    font-size: 54px;
+  }
+  footer > p{
+    font-size: 24px;
+  }
+
+}
+
+
+
+/*desk top*/
+@media(min-width:1000px){
+
+  header{
+    min-height: 60vh;
+  }
+  /*about*/
+  .about > section p{
+    font-size: 20px;
+    width: 70%;
+  }
+  .about figure{
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .service > section > article{
+    justify-content: center;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
+  .service figure{
+    width: 25%;
+  }
+
+/*contact*/
+  .about > article > h2,
+  .contact > article > h2{
+    font-size: 48px;
+    width: 30%;
+  }
+  .contact input{
+    font-size: 20px;
+  }
+  header a,
+  .about a,
+  .service a,
+  .contact [type="submit"]{
+    padding: 1%;
+    width: 20vw;
+    font-size: 20px;
+  }
+
+/*footer*/
+  footer p{
+    font-size: 18px;
+    width: 70%;
+
+  }
+}
